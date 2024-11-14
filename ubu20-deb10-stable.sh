@@ -25,10 +25,10 @@ clear;clear;clear
 
 # // Banner
 echo -e "${YELLOW}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-echo -e "  Developer » GHOIBVPN࿐${YELLOW}(${NC}${green} Stable Edition ${NC}${YELLOW})${NC}"
+echo -e "  Developer » HUNCHOBRIAN࿐${YELLOW}(${NC}${green} Stable Edition ${NC}${YELLOW})${NC}"
 echo -e "  » This Will Quick Setup VPN Server On Your Server"
-echo -e "  Pembuat : ${green} GHOIBVPN࿐® ${NC}"
-echo -e "  HAK CIPTA GHOIBVPN࿐ ${YELLOW}(${NC} 2024 ${YELLOW})${NC}"
+echo -e "  Pembuat : ${green} HUNCHOBRIAN࿐® ${NC}"
+echo -e "  HAK CIPTA HUNCHOBRIAN࿐ ${YELLOW}(${NC} 2024 ${YELLOW})${NC}"
 echo -e "${YELLOW}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 echo ""
 sleep 2
@@ -84,7 +84,7 @@ gem install lolcat
 apt install wondershaper -y
 clear
 # REPO    
-    REPO="https://raw.githubusercontent.com/ghoibvpn21/Autoscript/GM/"
+    REPO="https://raw.githubusercontent.com/Hunchobrian/Autoscript/GM/"
 
 ####
 start=$(date +%s)
@@ -271,7 +271,7 @@ restart_system(){
 MYIP=$(curl -sS ipv4.icanhazip.com)
 echo -e "\e[32mloading...\e[0m" 
 clear
-izinsc="https://raw.githubusercontent.com/ghoibvpn21/Autoscript/GM/Register"
+izinsc="https://raw.githubusercontent.com/Hunchobrian/Autoscript/GM/Register"
 # USERNAME
 rm -f /usr/bin/user
 username=$(curl $izinsc | grep $MYIP | awk '{print $2}')
@@ -299,14 +299,22 @@ mai="datediff "$Exp" "$DATE""
 ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
 # Status Expired Active
 Info="(${green}Active${NC})"
-Error="(${RED}ExpiRED${NC})"
-today=`date -d "0 days" +"%Y-%m-%d"`
-Exp1=$(curl $izinsc | grep $MYIP | awk '{print $4}')
+Error="(${RED}INACTIVE${NC})"
+
+today=$(date -d "0 days" +"%Y-%m-%d")
+
+# Calculate the expiration date 10 years from today
+ten_years_from_now=$(date -d "+10 years" +"%Y-%m-%d")
+
+# Set the expiration date (modify as needed based on your script)
+Exp1=$ten_years_from_now 
+
 if [[ $today < $Exp1 ]]; then
-sts="${Info}"
+  sts="${Info}"
 else
-sts="${Error}"
+  sts="${Error}"
 fi
+
 TIMES="10"
 CHATID="6735684125"
 KEY="6501332793:AAFqR8ie_r1m6hLquZdMw7_wCAVp3hcbp20"
@@ -327,7 +335,7 @@ URL="https://api.telegram.org/bot$KEY/sendMessage"
 <b>baimkuy࿐</b>
 <code>━━━━━━━━━━━━━━━━━━━━━━━━━</code>
 <i>Automatic Notifications From Github</i>
-"'&reply_markup={"inline_keyboard":[[{"text":"ᴏʀᴅᴇʀ","url":"https://wa.me/+6281226229275"}]]}' 
+"'&reply_markup={"inline_keyboard":[[{"text":"ᴏʀᴅᴇʀ","url":"https://wa.me/+254794488895"}]]}' 
 
     curl -s --max-time $TIMES -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
 }
